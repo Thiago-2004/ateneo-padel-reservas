@@ -94,6 +94,16 @@ async function ensureInitialAdmin() {
   }
 }
 ensureInitialAdmin().catch(console.error);
+// =======================
+// ✅ HEALTHCHECK / ROOT (para Render)
+// =======================
+app.get("/", (req, res) => {
+  res.send("✅ Ateneo Padel Backend OK");
+});
+
+app.get("/health", (req, res) => {
+  res.json({ ok: true, status: "healthy" });
+});
 
 // =======================
 // HELPERS RESERVAS
