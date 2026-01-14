@@ -1,5 +1,5 @@
 // frontend/src/api.js
-const API_URL = "http://localhost:4001";
+const API_URL = "https://ateneo-padel-reservas.onrender.com";
 
 export function setToken(token) {
   localStorage.setItem("token", token);
